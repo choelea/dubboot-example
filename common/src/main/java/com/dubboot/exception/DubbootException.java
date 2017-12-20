@@ -1,7 +1,7 @@
 package com.dubboot.exception;
 
 
-public class DubbootException extends RuntimeException {
+public class DubbootException extends Exception {
 	/**
 	 * 
 	 */

@@ -40,5 +40,6 @@
 		<module>jpa-promotion</module>
 		<module>web-demo</module>
 		<module>common</module>
+		<module>dubboot-trace-log</module>
 	</modules>
 </project>

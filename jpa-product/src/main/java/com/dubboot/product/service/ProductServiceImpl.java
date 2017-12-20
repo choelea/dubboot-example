@@ -14,14 +14,14 @@ import com.dubboot.product.domain.Category;
 import com.dubboot.product.domain.Product;
 import com.dubboot.product.domain.ProductRepository;
 
-@Service(version = "1.0.0")
+@Service(version = "1.0.0", filter="traceIdFilter")
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired
 	private ProductRepository productRepo;
 	
 	@Override
-	public ProductData getProduct(String code) {
+	public ProductData getProduct(String code) throws DubbootException {
 		Product product = productRepo.getByCode(code);
 		if(product==null){
 			throw new DubbootException("0000112233", "Product Not found");
