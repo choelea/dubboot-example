@@ -14,6 +14,12 @@
 > 这里product服务的模型利用了[MongoDB vs Mysql 测试](http://blog.csdn.net/choelea/article/details/78119389) 的模型,代码和数据库。
 ## 项目结构介绍
 ![Dubbo-Spring-Boot-Maven](http://img.blog.csdn.net/20171220220016464?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2hvZWxlYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+## 项目运行
+根目录运行： `mvn install`, 进入jpa-product和jpa-promotion  web-demo的target目录一次运行jar文件。
+`java -jar xxxx.jar` 
+> zookeeper 需要提前安装运行（必须），dubbo-admin， dubbo-monitor 需要自行从dubbo工程中build部署并运行。
+访问web-demo的restful服务来验证：http://localhost:8080/product/pp-0 （分别消费product和promotion的服务: 1,从product拿到详情，2， 从promotion中判断是否支持groupbuying）
 ## 服务注册
 注册采用推荐的zookeeper，具体安装不在这里赘述。
 服务注册和监控这里没有详细介绍，需要根据实际情况修改以下配置：
