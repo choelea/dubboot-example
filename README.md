@@ -47,3 +47,7 @@ traceId的发起位置是从web-demo 接受到请求开始。 具体参考：com
 > 生产环境，在同一个容器中运行同一个服务的多个实例并不是最佳实践。为了充分利用系统的资源，可以选择启动多种服务的实例，不同服务的实例分布在不同的容器/机器上。 同一个服务的端口不变，IP地址或者hostname会不同。
 
 
+### RPC 和 Restful的性能对比
+可以通过jconsole来查看dubbo服务和spring boot的服务对系统资源的占有情况。
+运行Jar文件`java -Dcom.sun.management.jmxremote -jar xxx.jar`， 命令打开jconsole本地连接查看。
+
