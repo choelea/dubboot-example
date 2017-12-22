@@ -54,6 +54,5 @@ traceId的发起位置是从web-demo 接受到请求开始。 具体参考：com
 
 
 ### RPC 和 Restful的性能对比
-可以通过jconsole来查看dubbo服务和spring boot的服务对系统资源的占有情况。
-运行Jar文件`java -Dcom.sun.management.jmxremote -jar xxx.jar`， 命令打开jconsole本地连接查看。
+可以通过jconsole来查看本地运行的dubbo服务和spring boot的服务对系统资源的占有情况。
 
